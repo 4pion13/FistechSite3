@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel= "stylesheet" href= "reset.css">
+
+</head>
+<body class="bg-body-tertiary" onload="flashMessage()">
+
+    <div class="row vh-100 align-items-center justify-content-center">
+        <div class="my-3 p-3 bg-body rounded shadow-sm col-4">
+
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    {% for message in messages %}
+                      <p>{{ message }}</p>
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+
+                <form action="{{url_for('login')}}" method="post">
+                    <div class="d-flex flex-row justify-content-between align-items-start">
+                        <h1 class="h3 mb-3 fw-normal"><ya-tr-span data-index="1-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Please sign in" data-translation="Пожалуйста, войдите в систему" data-ch="0" data-type="trSpan">Вход</ya-tr-span></h1>
+                        <a href="{{ url_for('home') }}"><button type="button" class="btn-close" aria-label="Закрыть"></button></a>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="email" class="form-control mb-3" id="floatingInput" placeholder="name@example.com" name="email" required>
+                        <label for="floatingInput"><ya-tr-span data-index="2-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Email address" data-translation="Эл. адрес" data-ch="0" data-type="trSpan">Эл. адрес</ya-tr-span></label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control mb-5" id="floatingPassword" placeholder="Пароль" name="password" required>
+                        <label for="floatingPassword">Пароль</label>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-2" value="Login"><ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign in" data-translation="Вход" data-ch="0" data-type="trSpan">Вход</ya-tr-span></button>
+                    <p class="mt-5 mb-3 text-body-secondary"><ya-tr-span data-index="5-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="© 2017–2023" data-translation="© 2017–2023" data-ch="0" data-type="trSpan">© 2024</ya-tr-span></p>
+                </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>

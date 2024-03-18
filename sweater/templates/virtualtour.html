@@ -1,0 +1,75 @@
+{% extends 'menuhome.html' %}
+
+{% block content %}
+<div class="main">
+
+        <h1 class="text-1-first">Виртуальный тур</h1>
+        <div class="container-one">
+            <div class="main-slider">
+                <div class="slider-item"><img src="{{ url_for('static', filename='/img/Computer_auditor.png') }}"></div>
+                <div class="slider-item"><img src="{{ url_for('static', filename='/img/Tualet.png') }}"></div>
+                <div><img src="{{ url_for('static', filename='/img/interer.jpg') }}"></div>
+            </div>
+
+            <div class="main-info">
+                <ul class="main-info-list">
+                    <li class="first-text">Версия</li>
+                    <li class="second-text">1.4db</li>
+                </ul>
+                <ul class="main-info-list">
+                    <li class="first-text">Разрабочик</li>
+                    <li class="second-text">X.Vision inc.</li>
+                </ul>
+                <ul class="main-info-list">
+                    <li class="first-text">Язык интерфейса</li>
+                    <li class="second-text">Русский, Английский</li>
+                </ul>
+                <ul class="main-info-list">
+                    <li class="first-text">Протестировано</li>
+                    <li class="second-text">Windows 11, Windows 10</li>
+                </ul>
+                <ul class="main-info-list-last">
+                    <li class="first-text">Архитектура</li>
+                    <li class="second-text">x86 (65 bit)</li>
+                </ul>
+                <form method="post">
+                    <a href="user_directory/FistechProject.zip" >
+                        <button class="download-button">Скачать</button>
+                    </a>
+                </form>
+
+
+
+
+            </div>
+        </div>
+        <div class="container-two">
+            <div class="main-specifications">
+                <h2 class="text-1-h2">Минимальные требования</h2>
+                <img src="{{ url_for('static', filename='/img/Line.svg') }}">
+                <ul>
+                    <li class="specifications-text">OC: <span>Windows 11, Windows 10</span></li>
+                    <li class="specifications-text">Процессор: <span>Dual Core 2.4 GHz</span></li>
+                    <li class="specifications-text">Оперативная память: <span>8 GB ОЗУ</span></li>
+                    <li class="specifications-text">Видеокарта: <span>Intel HD 5000 (must support Metal API)</span></li>
+                    <li class="specifications-text">Место на диске: <span>15 GB</span></li>
+                </ul>
+
+            </div>
+            <div class="main-views">
+                <div class="main-views-content">
+                    <ul>
+                        <li>Опубликовано (изменено): 25 окт, 23:24</li>
+                        <li>Количество скачиваний: 243 </li>
+                        <li>Сайт колледжа: <a href="https://phystech.pro/"><u>Физтех-колледж</u></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

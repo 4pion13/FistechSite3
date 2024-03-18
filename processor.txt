@@ -1,0 +1,72 @@
+Intel Core i7-10700K
+AMD Ryzen 7 3800X
+Intel Core i5-9600K
+AMD Ryzen 5 3600X
+Intel Core i3-9100F
+AMD Ryzen 3 3200G
+Intel Core i9-9900K
+Intel Core i7-9700F
+Intel Core i5-8600K
+AMD Ryzen Threadripper 3960X
+Intel Xeon Platinum 8280
+AMD Ryzen 9 3900X
+Intel Core i9-7900X
+Intel Core i7-8700
+Intel Core i7-7700K
+Intel Core i3-8100
+Intel Celeron G5905
+AMD Ryzen 7 PRO 2700X
+Intel Pentium Gold G6405
+Intel Core m5-6Y57
+AMD FX-8350
+Intel Core i7-4960X
+AMD Ryzen 5 PRO 2600
+Intel Core 2 Quad Q9550
+AMD Athlon 200GE
+Intel Core i7-3970X
+Intel Core i5-7600K
+Intel Core i3-7100
+Intel Xeon E5-2699 v4
+Intel Xeon Gold 6130
+AMD EPYC 7601
+Intel Core i9-3900X
+Intel Core i7-6950X
+Intel Core i5-6600K
+Intel Core i3-6100
+Intel Core M-5Y10c
+AMD Phenom II X6 1100T
+Intel Core2 Duo E8400
+Intel Atom x7-E3950
+Intel Celeron N4100
+AMD Ryzen PRO 4650G
+Intel Xeon Bronze 3204
+Intel Xeon Silver 4210R
+Intel Atom C3955
+AMD Ryzen 4750G
+Intel Xeon D-1540
+Intel Xeon W-2145
+Intel Xeon Phi 7250
+Intel Itanium 2 9064
+Intel Atom Z2483
+AMD Opteron 6378
+Intel Celeron 1047UE
+Intel Celeron J3355
+Intel Celeron D 336
+Intel Celeron M 440
+Intel 80486DX2
+Intel 386SL
+Intel 80186
+Intel 286
+Intel 186
+Intel 4004
+Intel 8742
+Intel i960
+Intel i860
+Intel i740
+Intel i386
+Intel i486SX
+Intel i386DX
+Intel i286
+Intel i186
+Intel iAPX 432
+Intel iAXP 152

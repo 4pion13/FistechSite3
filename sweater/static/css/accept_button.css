@@ -1,0 +1,29 @@
+.accept-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40.5px;
+
+}
+
+.accept-button-confirm {
+    height: 41px;
+    top:50%;
+    background-color:#98FB98;
+}
+
+
+.rejection-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40.5px;
+}
+
+.rejection-button-confirm {
+    height: 41px;
+    top:50%;
+    background-color: black;
+}
+
+.user-table {
+    display: flex;
+}

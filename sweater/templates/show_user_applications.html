@@ -1,0 +1,39 @@
+{% extends 'menu_second.html' %}
+
+
+{% block content %}
+
+    <div class="row vh-100 align-items-center justify-content-center">
+        <div class="my-3 p-3 bg-body rounded shadow-sm col-8">
+            <p class="h3 mb-1">Ваши заявки</p>
+            <hr/>
+                {% for element in show_applications_data %}
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div>
+                            <p class="h-5">Название проекта: {{ element.project_name }}</p>
+                            <p class="h-5">Автор: {{ element.developer }}</p>
+                            <a href="#">Проверить проект</a>
+                        </div>
+
+                    <form method="post">
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                          <button class="btn btn-danger col-2" name="delete_project" value="{{ element.id }}">Удалить продукт</button>
+                          <button class="btn btn-success col-2" name="add_project" value="{{ element.id }}">Опубликовать продукт</button>
+                        </div>
+                    </form>
+
+                </div>
+                <hr/>
+                {% endfor %}
+
+
+        </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

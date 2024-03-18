@@ -1,0 +1,77 @@
+{% extends 'menu.html' %}
+
+
+{% block content %}
+
+<div class="row vh-100 align-items-center justify-content-center d-flex flex-column">
+                <div class="my-3 p-3 bg-body rounded shadow-sm col-4">
+
+                        <form method="post" action="{{url_for('create_user')}}">
+                            <h1 class="h3 mb-3 fw-normal"><ya-tr-span data-index="1-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Please sign in" data-translation="Пожалуйста, войдите в систему" data-ch="0" data-type="trSpan">Создание пользователя</ya-tr-span></h1>
+
+                            <div class="form-floating">
+                                <input type="email" name="email" class="form-control mb-3" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput"><ya-tr-span data-index="2-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Email address" data-translation="Эл. адрес" data-ch="0" data-type="trSpan">Эл. адрес</ya-tr-span></label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="email" class="form-control mb-4" id="floatingPassword" placeholder="Эл. адрес(повторно)" name="email_two" required>
+                                <label for="floatingPassword">Эл. адрес(повторно)</label>
+                            </div>
+                            <select class="form-select mb-4" aria-label="Default select example" name="usertype">
+                              <option selected>Выберите тип пользователя</option>
+                              <option value="Admin">Admin</option>
+                              <option value="User">User</option>
+                            </select>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Подтверждаю создание аккаунта
+                                </label>
+                            </div>
+
+                            <button class="btn btn-primary w-100 py-2 mb-4" value="Login"><ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign in" data-translation="Вход" data-ch="0" data-type="trSpan">Создать</ya-tr-span></button>
+                        </form>
+                            {% with messages = get_flashed_messages() %}
+                              {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-primary {{ message }} alert-dismissible fade show col-12" role="alert">
+                                        <strong>Статус: </strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                {% endfor %}
+                              {% endif %}
+                            {% endwith %}
+
+                                <div class="accordion col-12" id="accordionExample">
+                                        <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Инструкция
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                            <strong>Процес создания пользовательского аккаунта.</strong> После указания почты пользователю, на почту приходит сообщение с паролем от его аккаунта <code>(пароль от аккаунта генерируется сам)</code>.
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        </div>
+                                        </div>
+                                    </div>
+
+                            </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+{% endblock %}

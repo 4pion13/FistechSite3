@@ -1,0 +1,54 @@
+{% extends 'menu.html' %}
+
+
+{% block content %}
+
+
+<div class="row align-items-center justify-content-center d-flex flex-column">
+    <form method="post">
+          <div class="user-table">
+              <table class="table table-bordered">
+                  <thead>
+                <tr>
+                          <th scope="col">Номер записи</th>
+                        <th scope="col">Email пользователя</th>
+                          <th scope="col">Название проекта</th>
+                          <th scope="col">Автор</th>
+
+                        </tr>
+              </thead>
+
+              <tbody>
+              {% for item in show_data %}
+                <tr>
+                  <tr onclick="document.getElementById('home').submit();" name="table_line" value="send_data">
+                                          <td>{{ item.id }}</td>
+                                            <td>{{ item.user_email }}</td>
+                                            <td>{{ item.project_name }}</td>
+                                            <td>{{ item.developer }}</td>
+
+                                        </tr>
+
+              {% endfor %}
+              </tbody>
+
+              </table>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

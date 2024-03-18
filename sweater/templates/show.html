@@ -1,0 +1,61 @@
+{% extends 'menu.html' %}
+
+
+{% block content %}
+
+
+<div class="row align-items-center justify-content-center d-flex flex-column">
+    <form method="post">
+          <div class="user-table">
+              <table class="table table-bordered">
+                  <thead>
+                <tr>
+                          <th scope="col">Номер записи</th>
+                          <th scope="col">Название проекта</th>
+                          <th scope="col">Автор</th>
+                          <th scope="col">Язык</th>
+                            <th scope="col">Система</th>
+                            <th scope="col">Архитектура</th>
+                            <th scope="col">Процессор</th>
+                            <th scope="col">Видеокарта</th>
+                        </tr>
+              </thead>
+
+              <tbody>
+              {% for item in show_data %}
+                <tr>
+                  <tr onclick="document.getElementById('home').submit();" name="table_line" value="send_data">
+                                          <td>{{ item.id }}</td>
+                                            <td>{{ item.project_name }}</td>
+                                            <td>{{ item.developer }}</td>
+                                            <td>{{ item.lang }}</td>
+                                            <td>{{ item.os_sys }}</td>
+                                            <td>{{ item.arch }}</td>
+                                            <td>{{ item.processor }}</td>
+                                            <td>{{ item.videoadapter }}</td>
+                                            <td><button type="submit" class="btn btn-warning w-20" name="record" value="{{ item.id }}">Тест</button></td>
+                                        </tr>
+
+              {% endfor %}
+              </tbody>
+
+              </table>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

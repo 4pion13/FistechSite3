@@ -1,0 +1,85 @@
+{% extends 'menuhome.html' %}
+
+{% block content %}
+
+    {% for item in show_applications_data %}
+    <h1 class="text-1-first">{{ item.project_name }}</h1>
+        <div class="container-one">
+                <div class="main-slider">
+                    <div class="slider-item"><img src="{{ url_for('static', filename= item.one_slide ) }}"></div>
+                    <div class="slider-item"><img src="{{ url_for('static', filename= item.two_slide ) }}"></div>
+                    <div class="slider-item"><img src="{{ url_for('static', filename= item.three_slide ) }}"></div>
+                </div>
+
+                <div class="main-info">
+                    <ul class="main-info-list">
+                        <li class="first-text">Версия</li>
+                        <li class="second-text">{{ item.vers }}</li>
+                    </ul>
+                    <ul class="main-info-list">
+                        <li class="first-text">Разрабочик</li>
+                        <li class="second-text">{{ item.developer }}</li>
+                    </ul>
+                    <ul class="main-info-list">
+                        <li class="first-text">Язык интерфейса</li>
+                        <li class="second-text">{{ item.lang }}</li>
+                    </ul>
+                    <ul class="main-info-list">
+                        <li class="first-text">Протестировано</li>
+                        <li class="second-text">{{ item.os_sys }}</li>
+                    </ul>
+                    <ul class="main-info-list-last">
+                        <li class="first-text">Архитектура</li>
+                        <li class="second-text">{{ item.arch }}</li>
+                    </ul>
+
+
+                        <a href="{{ url_for('static', filename= item.file ) }}">
+                            <button class="download-button">Скачать</button>
+                        </a>
+
+
+
+
+
+                </div>
+            </div>
+            <div class="container-two">
+                <div class="main-specifications">
+                    <h2 class="text-1-h2">Минимальные требования</h2>
+                    <img src="{{ url_for('static', filename='/img/Line.svg') }}">
+                    <ul>
+                        <li class="specifications-text">OC: <span>{{ item.os_sys }}</span></li>
+                        <li class="specifications-text">Процессор: <span>{{ item.processor }}</span></li>
+                        <li class="specifications-text">Оперативная память: <span>{{ item.ozu }}</span></li>
+                        <li class="specifications-text">Видеокарта: <span>{{ item.videoadapter }}</span></li>
+                        <li class="specifications-text">Место на диске: <span>{{ item.disk }} ГБ</span></li>
+                    </ul>
+
+                </div>
+                <div class="main-views">
+                    <div class="main-views-content">
+                        <ul>
+                            <li>Опубликовано (изменено): 25 окт, 23:24</li>
+                            <li>Количество скачиваний: 243 </li>
+                            <li>Сайт колледжа: <a href="https://phystech.pro/"><u>Физтех-колледж</u></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="block-none">
+
+        </div>
+
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}
+

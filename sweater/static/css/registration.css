@@ -1,0 +1,42 @@
+
+.item-two a {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.item-two a {
+    position: relative;
+    font-family: 'FontName bold';
+	font-size: 35px;
+    color: #FFF;
+    border-radius: 15px;
+    background: black;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    width: 100%;
+
+
+}
+
+.item-two button:hover {
+    color: black;
+    background: #fff;
+    transition: 0.3s;
+}
+
+
+.registration button:not(:hover){
+    transition: 0.3s;
+}
+
+
+.background-menu button{
+    text-align: center;
+}
+
+
+
+
+
+

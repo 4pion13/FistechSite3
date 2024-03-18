@@ -1,0 +1,146 @@
+/* Обычный */
+@font-face {
+	font-family: 'FontName regular'; 
+	src: url(/static/fonts/MailSansRoman-Regular.ttf);
+}
+ 
+/* Жирный */
+@font-face {
+	font-family: 'FontName bold'; 
+	src: url(/static/fonts/MailSansRoman-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'FontName demibold'; 
+	src: url(/static/fonts/MailSansRoman-DemiBold.ttf);
+}
+
+@font-face {
+	font-family: 'FontName demibold-48px'; 
+	src: url(/static/fonts/MailSansRoman-DemiBold.ttf);
+}
+
+@font-face {
+	font-family: 'FontName demibold-48px'; 
+	src: url(/static/fonts/MailSansRoman-Bold.ttf);
+}
+@font-face {
+	font-family: 'FontName medium'; 
+	src: url(/static/fonts/MailSansRoman-Medium.ttf);
+}
+
+@font-face {
+	font-family: 'FontName regular'; 
+	src: url(/static/fonts/MailSansRoman-Regular.ttf);
+}
+
+.text-1 {
+	font-family: 'FontName bold'; 
+	font-size: 48px;
+    color: #FFF;
+}
+ 
+.text-2 {
+	font-family: 'FontName regular'; 
+	font-size: 32px;
+}
+
+.text-3 {
+    font-family: 'FontName demibold';
+    font-size: 30px;
+}
+
+.text-4 {
+    font-family: 'FontName demibold-48px';
+    font-size: 48px;
+    color: #FFF;
+}
+
+.text-5 {
+    font-family: 'FontName bold'; 
+	font-size: 36px;
+    color: #FFF;
+}
+
+.text-6 {
+    font-family: 'FontName medium'; 
+	font-size: 32px;
+    color: #FFF;
+}
+
+.text-7 {
+    font-family: 'FontName medium'; 
+	font-size: 32px;
+    background: linear-gradient(92deg, #4262D1 -11.62%, #FFF 164.94%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-menu-button {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'FontName demibold';
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+
+}
+
+
+.text-menu-button:hover {
+    background-color: #fff;
+    color: black;
+    transition: 0.3s;
+
+
+
+
+}
+
+
+.text-menu-button:not(:hover){
+    transition: 0.3s;
+}
+
+
+.text-2-first {
+    margin-top:12px;
+    color: #FFF;
+    text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'FontName demibold';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+
+}
+
+
+.first-text {
+    color: #FFF;
+    font-family: 'FontName regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.second-text {
+    color: #FFF;
+    font-family: 'FontName regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+}

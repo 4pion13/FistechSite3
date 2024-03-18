@@ -1,0 +1,53 @@
+{% extends 'menu.html' %}
+
+
+{% block content %}
+
+
+<div class="row align-items-center justify-content-center d-flex flex-column">
+    <form method="post">
+          <div class="user-table">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Номер</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Имя</th>
+
+                        </tr>
+              </thead>
+
+              <tbody>
+              {% for item in show_data %}
+                <tr>
+                  <tr onclick="document.getElementById('home').submit();" name="table_line" value="send_data">
+                                          <td>{{ item.id }}</td>
+                                            <td>{{ item.email }}</td>
+                                            <td>{{ item.name }}</td>
+
+
+                                        </tr>
+
+              {% endfor %}
+              </tbody>
+
+              </table>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

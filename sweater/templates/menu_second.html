@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню администратора</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/reset.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/border.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/margin-left.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/fake.css') }}">
+
+
+</head>
+<body class="bg-body-tertiary" onload="flashMessage()">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid justify-content-between">
+            <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="#">
+                            Панель пользователя
+                        </a>
+
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Подача заявки на создание продукта
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('submitting_an_application') }}">Создать</a></li>
+                            <li><a class="dropdown-item" href="#">Удалить</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('user_application') }}">Посмотреть статус моих заявок</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown ">
+                            <a class="btn btn-secondary dropdown-toggle margin-left" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Новые</a></li>
+                            <li><a class="dropdown-item" href="#">Принятые</a></li>
+                            <li><a class="dropdown-item" href="#">Реестр заявок</a></li>
+                            </ul>
+                        </div>
+                        <a href="{{ url_for('usermenu') }}"><button type="button" class="btn btn-light margin-left">Главная</button></a>
+                        <a href="{{ url_for('home') }}"><button type="button" class="btn btn-light margin-left">Платформа Физтех 3д</button></a>
+
+            </div>
+            <div class="">
+                        <a href="{{ url_for('logout') }}"><button type="button" class="btn btn-danger">Выход</button></a>
+                        <button class="navbar-toggler margin-left" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Переключить навигацию">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+            </div>
+        </div>
+
+
+
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Меню</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="dropdown mb-2">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Пользователи
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('create_user') }}">Создать</a></li>
+                            <li><a class="dropdown-item" href="#">Удалить</a></li>
+                            <li><a class="dropdown-item" href="#">Посмотреть данные</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown mb-2">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Заявки
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="{{ url_for('show_applications') }}">Новые</a></li>
+                            <li><a class="dropdown-item" href="#">Принятые</a></li>
+                            <li><a class="dropdown-item" href="#">Реестр заявок</a></li>
+                        </ul>
+                    </div>
+                    <a href="{{ url_for('personal_user_account') }}"><button type="button" class="btn btn-light">Личный кабинет</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger">Выход</button></a>
+
+
+                </div>
+
+
+        </div>
+
+    </nav>
+
+    <div class="fake"></div>
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script type="text/javascript">// <![CDATA[
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();
+        }
+// ]]></script>
+
+</html>

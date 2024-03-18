@@ -1,0 +1,48 @@
+{% extends 'menuhome.html' %}
+
+{% block content %}
+        <div class="main-block">
+
+            <div class="main-block__content">
+                <div class="main-block__content-text">
+                    <h1 class="text-1-h1">Виртуальный тур по колледжу</h1>
+
+                    <a href="{{ url_for('virtual_tour') }}"><button class="button-more">Подробнее...</button></a>
+
+
+                </div>
+                <div class="main-block__img">
+
+                    <img src="{{ url_for('static', filename='/img/colledge.png') }}">
+                </div>
+            </div>
+        </div>
+        <!--Два блока информации-->
+        <div class="main-two-blocks">
+            <div class="block-one">
+                <h2 class="block-one__h2">Здравствуйте!</h2>
+                <p class="block-one__p">Мы рады приветствовать Вас на нашем сайте. Здесь Вы найдете информацию о 3д разработках нашего колледжа.</p>
+            </div>
+
+            <div class="block-two">
+                <a href="https://phystech.pro/">
+                    <img src="{{ url_for('static', filename='/img/Logo.svg') }}">
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="silent-block">
+
+    </div>
+    <div class="block-none">
+
+    </div>
+
+
+
+{% endblock %}

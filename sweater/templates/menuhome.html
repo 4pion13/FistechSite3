@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fistech 3d</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/main.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/font.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/adaptation') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/menu.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/reset.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/registration.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/projects.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/virtualtour.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/slick/slick-theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+
+<body>
+    <div class="menu menu-hidden">
+        <div class="background-menu">
+            <button class="button-close">
+                <img src="{{ url_for('static', filename='/img/closebtn.svg') }}">
+            </button>
+            <img src="{{ url_for('static', filename='/img/logotwo.svg') }}">
+            <div class="items">
+
+                <div class="item-one">
+                    <ul>
+
+                            <a href="{{ url_for('home') }}"><li class="text-menu-button"><button>Главная</button></li></a>
+
+                            <a href="{{ url_for('projects') }}"><li class="text-menu-button"><button >Проекты</button></li></a>
+
+                            <a href="#"><li class="text-menu-button"><button>О нас</button></li></a>
+
+                    </ul>
+                </div>
+                <div class="item-one">
+                    <ul>
+                            <a href="{{ url_for('login') }}"><li class="text-menu-button"><button>Вход</button></li></a>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="block-none">
+
+    </div>
+
+    <div class="main">
+
+        <!-- Поиск -->
+        <div class="main-search-container">
+            <button class="menu-button"><img src="{{ url_for('static', filename='/img/burger.svg') }}"></button>
+            <form class="main-search" action="" method="get">
+                <input  class="text-3" name="s" placeholder="Поиск по сайту" type="search">
+                <button type="submit"><img src="{{ url_for('static', filename='/img/search.svg') }}"></button>
+            </form>
+
+        </div>
+
+        <!--Центральный блок с информацией-->
+        {% block content %}
+
+        {% endblock %}
+        <div class="block-none">
+
+        </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/menu.js') }}"></script>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/slick.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/slider.js') }}"></script>
+
+
+</body>
+</html>

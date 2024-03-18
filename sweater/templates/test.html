@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальный тур</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/virtualtour.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/font.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/adaptation') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/reset.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/css/menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/slick/slick-theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+       <div class="menu menu-hidden">
+                    <div class="background-menu">
+                        <button class="button-close">
+                            <img src="{{ url_for('static', filename='/img/closebtn.svg') }}">
+                        </button>
+                        <img src="{{ url_for('static', filename='/img/logotwo.svg') }}">
+                        <ul>
+                            <form action="/">
+                                <li class="main-menu__text"><button href="main.html">Главная</button></li>
+                            </form>
+                            <form action="/projects">
+                                <li class="main-menu__text"><button href="virtualtour.html">Проекты</button></li>
+                            </form>
+                            <form>
+                                <li class="main-menu__text"><button>О нас</button></li>
+                            </form>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="block-none">
+                </div>
+                <div class="main">
+                    <div class="main-search-container">
+                        <button class="menu-button"><img src="{{ url_for('static', filename='/img/burger.svg') }}"></button>
+                        <form class="main-search" action="" method="get">
+                            <input  class="text-3" name="s" placeholder="Поиск по сайту" type="search">
+                            <button type="submit"><img src="{{ url_for('static',filename='/img/search.svg') }}"></button>
+                        </form>
+                    </div>
+                    {% for item in show_applications_data %}
+                    <div class="container-one">
+                        <div class="main-slider">
+                            <div class="slider-item"><img src="{{ url_for('static', filename= item.one_slide ) }}"></div>
+                            <div class="slider-item"><img src="{{ url_for('static', filename= item.two_slide ) }}"></div>
+                            <div class="slider-item"><img src="{{ url_for('static', filename= item.three_slide ) }}"></div>
+                        </div>
+
+                        <div class="main-info">
+                            <ul class="main-info-list">
+                                <li class="first-text">Версия</li>
+                                <li class="second-text">{{ item.vers }}</li>
+                            </ul>
+                            <ul class="main-info-list">
+                                <li class="first-text">Разрабочик</li>
+                                <li class="second-text">{{ item.developer }}</li>
+                            </ul>
+                            <ul class="main-info-list">
+                                <li class="first-text">Язык интерфейса</li>
+                                <li class="second-text">{{ item.lang }}</li>
+                            </ul>
+                            <ul class="main-info-list">
+                                <li class="first-text">Протестировано</li>
+                                <li class="second-text">{{ item.os_sys }}</li>
+                            </ul>
+                            <ul class="main-info-list-last">
+                                <li class="first-text">Архитектура</li>
+                                <li class="second-text">{{ item.arch }}</li>
+                            </ul>
+
+
+                                <a href="{{ url_for('static', filename= item.file ) }}">
+                                    <button name="download" class="download-button">Скачать</button>
+                                </a>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="container-two">
+                        <div class="main-specifications">
+                            <h2 class="text-1-h2">Минимальные требования</h2>
+                            <img src="{{ url_for('static', filename='/img/Line.svg') }}">
+                            <ul>
+                                <li class="specifications-text">OC: <span>{{ item.os_sys }}</span></li>
+                                <li class="specifications-text">Процессор: <span>{{ item.processor }}</span></li>
+                                <li class="specifications-text">Оперативная память: <span>{{ item.ozu }}</span></li>
+                                <li class="specifications-text">Видеокарта: <span>{{ item.videoadapter }}</span></li>
+                                <li class="specifications-text">Место на диске: <span>{{ item.disk }} ГБ</span></li>
+                            </ul>
+
+                        </div>
+                        <div class="main-views">
+                            <div class="main-views-content">
+                                <ul>
+                                    <li>Опубликовано (изменено): 25 окт, 23:24</li>
+                                    <li>Количество скачиваний: 243 </li>
+                                    <li>Сайт колледжа: <a href="https://phystech.pro/"><u>Физтех-колледж</u></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                    <form method="post">
+                        <div class="row p-3 align-items-center justify-content-center d-flex flex-column">
+                            <div class="col-4 mb-1">
+                                <button class="btn btn-warning w-100 py-2" name="button_back" value="{{ item.id }}"><ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign in" data-translation="Вход" data-ch="0" data-type="trSpan">Вернуться назад</ya-tr-span></button>
+                            </div>
+                            <div class="col-4 mb-1">
+                                <button class="btn btn-success w-100 py-2" name="button_upload" value="{{ item.id }}"><ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign in" data-translation="Вход" data-ch="0" data-type="trSpan">Одобрить заявку</ya-tr-span></button>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-danger w-100 py-2 mb-4" name="button_delete" value="{{ item.id }}" name="create_page"><ya-tr-span data-index="4-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign in" data-translation="Вход" data-ch="0" data-type="trSpan">Тест</ya-tr-span></button>
+                            </div>
+                        </div>
+                    </form>
+
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="block-none">
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/slick.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/slider.js') }}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+div#loading {
+    width: 35px;
+    height: 35px;
+    display: none;
+    background: url(sweater/static/ajax-loading-c2.gif) no-repeat;
+    cursor: wait;
+}

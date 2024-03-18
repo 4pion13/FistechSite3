@@ -1,0 +1,29 @@
+{% extends 'menuhome.html' %}
+
+{% block content %}
+
+
+        <h1 class="text-1-first">Проекты</h1>
+
+              <a href="{{ url_for('virtual_tour') }}">
+
+                  <div class="application-block">
+                    <p class="text-2-first">Виртуальный тур по колледжу</p>
+                  </div>
+             </a>
+
+            {% for item in show_projects %}
+              <a href="/projects/{{ item.id }}/view">
+                  <div class="application-block">
+                    <p class="text-2-first">{{ item.project_name }}</p>
+                  </div>
+              </a>
+            {% endfor %}
+
+
+
+
+
+{% endblock %}
+
+

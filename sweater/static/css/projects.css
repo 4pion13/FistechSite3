@@ -1,0 +1,42 @@
+.text-1-first {
+    font-family: 'FontName bold';
+	font-size: 48px;
+    color: #FFF;
+    margin-bottom: 50px;
+
+}
+
+.application-block {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 101px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.30);
+    padding:20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    top: 0;
+
+
+}
+
+.application-block:hover {
+    padding: 0.5em 2em; /* Расстояние от текста до края */
+    font-size: 0.9em; /* Размер шрифта */
+    background: linear-gradient(39deg, rgba(52,52,52,1) 0%, rgba(0,0,0,1) 21%, rgba(94,94,94,1) 55%, rgba(0,0,0,1) 100%);
+    color: #fff; /* Цвет текста */
+    transition: 0.3s;
+    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
+    top: -5px;
+
+
+}
+
+
+.application-block:not(:hover){
+ transition: 0.3s;
+}
+
+
+

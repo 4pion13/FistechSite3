@@ -1,0 +1,155 @@
+{% extends 'menu_second.html' %}
+
+
+{% block content %}
+<div id="loading"></div>
+    <div class="row vh-100 align-items-center justify-content-center" id="content">
+        <div class="my-3 p-3 bg-body rounded shadow-sm col-8">
+            <form method="post" enctype="multipart/form-data">
+                <h1 class="h5 mb-3">Информация</h1>
+                <div class="row mb-5">
+                    <div class="col-md-2">
+                        <label for="inputEmail4" class="form-label">Название проекта</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="name" autocomplete="off" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputPassword4" class="form-label">Версия</label>
+                        <input type="text" class="form-control" id="inputPassword4" name="version" autocomplete="off" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputPassword4" class="form-label">Автор/Разработчик</label>
+                        <input type="text" class="form-control" id="inputPassword4" name="autor" autocomplete="off" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputPassword4" class="form-label">Язык</label>
+                        <select class="form-select" aria-label="Default select example" name="lang" required>
+                          <option selected>Выберите язык</option>
+                          <option value="Русский">Русский</option>
+                          <option value="Английский">Английский</option>
+                          <option value="Русский/Английский">Русский/Английский</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputPassword4" class="form-label">ОС</label>
+                        <select class="form-select" aria-label="Default select example" name="os_system" required>
+                          <option selected>Выберите ОС</option>
+                          <option value="Windows 10">Windows 10</option>
+                          <option value="Windows 11">Windows 11</option>
+                          <option value="Windows 11/Windows 10">Windows 11/Windows 10</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Mac OS">Mac OS</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputPassword4" class="form-label">Архитектура</label>
+                        <select class="form-select" aria-label="Default select example" name="arch" required>
+                          <option selected>Выберите архитектуру</option>
+                          <option value="Windows 10">ARM</option>
+                            <option value="x86">x86</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+                <h1 class="h5 mb-3">Минимальные требования</h1>
+                <div class="row mb-5">
+                    <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label">Процессор</label>
+                        <input type="search" list="character" class="form-control" id="inputEmail4" autocomplete="off" name="proc" required>
+                            <datalist id="character">
+                                {% for row in search_proc_info %}
+                                    <option value="{{ row }}"></option>
+                                {% endfor %}
+                            </datalist>
+
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputPassword4" class="form-label">ОЗУ</label>
+                        <select class="form-select" aria-label="Default select example" name="ozu" required>
+                          <option selected>Выберите количество ОЗУ</option>
+                          <option value="2 GB">2 GB</option>
+                            <option value="4 GB">4 GB</option>
+                            <option value="8 GB">8 GB</option>
+                            <option value="16 GB">16 GB</option>
+                            <option value="32 GB">32 GB</option>
+                            <option value="64 GB">64 GB</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label">Видеокарта</label>
+                        <input type="search" class="form-control" list="character-two" id="inputEmail4" autocomplete="off" name="video" required>
+                            <datalist id="character-two">
+                                {% for item in search_video_info %}
+                                    <option value="{{ item }}"></option>
+                                {% endfor %}
+                            </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label">Место на диске</label>
+                        <input type="number" class="form-control" id="inputEmail4" name="disk" autocomplete="off" required>
+                    </div>
+
+                </div>
+
+
+
+                <h1 class="h5 mb-3">Слайды продукта</h1>
+                <label for="formFile" class="form-label">Допущенные расширения файлов png, jpg, jpeg</label>
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Слайд 1</label>
+                          <input class="form-control" type="file" accept="image/png, image/jpg, image/jpeg," name="slide_one" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Слайд 2</label>
+                          <input class="form-control" type="file" accept="image/png, image/jpg, image/jpeg," name="slide_two" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Слайд 3</label>
+                          <input class="form-control" type="file" accept="image/png, image/jpg, image/jpeg," name="slide_three" required>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                    <h1 class="h5 mb-3">Файл продукта</h1>
+                    <div class="row mb-3">
+
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                              <label for="formFile" class="form-label">Файл продукта должен быть в zip формате</label>
+                              <input class="form-control" type="file" accept=".zip, .rar" name="slide_four" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                <button type="submit" class="btn btn-primary col-12 mb-3" value="send_data" onclick="loading();">Отправить заявку</button>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert {{ message }} alert-dismissible fade show col-12" role="alert">
+                                <strong>Статус: {{ category }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -497,3 +497,6 @@ def user_application():
         pass
 
 
+@app.route('/game',  methods=['POST','GET'])
+def game():
+    return render_template('index.html')

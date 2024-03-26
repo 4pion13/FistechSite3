@@ -4,3 +4,5 @@
 /test.py
 /testkeyboard.py
 /testlist.py
+/__pycache__
+.DS_Store
